@@ -42,11 +42,11 @@
             <p class="muted" id="langSubtitle"></p>
           </div>
         </div>
-        <a class="btn btn-ghost" href="./index.html#languages">← Назад</a>
+        <a class="btn btn-ghost" href="./index.html#languages" data-i18n="back_btn">← Назад</a>
       </div>
 
       <div class="panel">
-        <h2>Для чего вам язык?</h2>
+        <h2 data-i18n="goal_title">Для чего вам язык?</h2>
         <div class="goal-grid" id="goalGrid"></div>
       </div>
     
@@ -119,12 +119,22 @@
       $('uiUa').setAttribute('aria-pressed', ui==='ua' ? 'true':'false');
       document.documentElement.lang = ui==='ua' ? 'uk' : 'ru';
       const I = {
-        ru:{nav_languages:'Языки',nav_about:'Кто мы?',nav_pricing:'Расценки',nav_contact:'Контакты',
-            level_title:'Какой уровень хотите?',level_subtitle:'Выберите целевой уровень. B2–C1 — отдельная группа.',
-            ready_title:'Готово',ready_btn:'Показать учителей'},
-        ua:{nav_languages:'Мови',nav_about:'Хто ми?',nav_pricing:'Ціни',nav_contact:'Контакти',
-            level_title:'Який рівень хочете?',level_subtitle:'Оберіть цільовий рівень. B2–C1 — окрема група.',
-            ready_title:'Готово',ready_btn:'Показати вчителів'}
+        ru:{
+          nav_languages:'Языки',nav_about:'Кто мы?',nav_pricing:'Расценки',nav_contact:'Контакты',
+          goal_title:'Для чего вам язык?',back_btn:'← Назад',
+          level_title:'Какой уровень хотите?',level_subtitle:'Выберите целевой уровень. B2–C1 — отдельная группа.',
+          ready_title:'Готово',ready_btn:'Показать учителей',
+          lang_not_found:'Язык не найден',lang_not_found_hint:'Вернитесь на главную и выберите язык.',
+          goal_fallback:'Цель'
+        },
+        ua:{
+          nav_languages:'Мови',nav_about:'Хто ми?',nav_pricing:'Ціни',nav_contact:'Контакти',
+          goal_title:'Для чого вам мова?',back_btn:'← Назад',
+          level_title:'Який рівень хочете?',level_subtitle:'Оберіть цільовий рівень. B2–C1 — окрема група.',
+          ready_title:'Готово',ready_btn:'Показати вчителів',
+          lang_not_found:'Мову не знайдено',lang_not_found_hint:'Поверніться на головну та оберіть мову.',
+          goal_fallback:'Ціль'
+        }
       };
       document.querySelectorAll('[data-i18n]').forEach(n=>{
         const k=n.getAttribute('data-i18n');
@@ -163,9 +173,11 @@ function el(tag, attrs = {}, children = []) {
     function qp(name){ return new URL(location.href).searchParams.get(name); }
 
     (async function init(){
-      const res = await fetch('./data.json', { cache: 'no-store' });
+      const ui = getUI();
+      setUI(ui);
+      const dataFile = ui === 'ua' ? './data-ua.json' : './data.json';
+      const res = await fetch(dataFile, { cache: 'no-store' });
       const data = await res.json();
-      setUI(getUI());
       $('uiRu').addEventListener('click', ()=>{ location.search = `?lang=${encodeURIComponent(qp('lang')||'')}&ui=ru`; });
       $('uiUa').addEventListener('click', ()=>{ location.search = `?lang=${encodeURIComponent(qp('lang')||'')}&ui=ua`; });
       $('siteName').textContent = data.site.name;
@@ -175,8 +187,12 @@ function el(tag, attrs = {}, children = []) {
       const lang = data.languages.find(x => x.id === langId);
       if (!lang) {
         applyTheme(data.site.defaultTheme);
-        $('langName').textContent = 'Язык не найден';
-        $('langSubtitle').textContent = 'Вернитесь на главную и выберите язык.';
+        const I = {
+          ru:{lang_not_found:'Язык не найден',lang_not_found_hint:'Вернитесь на главную и выберите язык.'},
+          ua:{lang_not_found:'Мову не знайдено',lang_not_found_hint:'Поверніться на головну та оберіть мову.'}
+        };
+        $('langName').textContent = I[ui]?.lang_not_found || 'Язык не найден';
+        $('langSubtitle').textContent = I[ui]?.lang_not_found_hint || 'Вернитесь на главную и выберите язык.';
         return;
       }
 
@@ -206,7 +222,8 @@ function el(tag, attrs = {}, children = []) {
         if (selectedGoal && selectedLevel){
           rp.style.display = '';
           const goalObj = (lang.goals||[]).find(x=>x.id===selectedGoal);
-          document.getElementById('readyText').textContent = `${goalObj?goalObj.title:'Цель'} + ${selectedLevel}`;
+          const fallbackGoal = ui === 'ua' ? 'Ціль' : 'Цель';
+          document.getElementById('readyText').textContent = `${goalObj?goalObj.title:fallbackGoal} + ${selectedLevel}`;
           btn.disabled = false;
         } else {
           rp.style.display = 'none';

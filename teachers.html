@@ -111,7 +111,7 @@
             <p class="muted" id="pageSubtitle"></p>
           </div>
         </div>
-        <a class="btn btn-ghost" id="backBtn" href="./index.html#languages">← Назад</a>
+        <a class="btn btn-ghost" id="backBtn" href="./index.html#languages" data-i18n="back_btn">← Назад</a>
       </div>
 
       <div class="panel">
@@ -204,6 +204,33 @@
         </svg>`
     };
 
+    const UI_COPY = {
+      ru: {
+        nav_back:'Назад',nav_about:'Кто мы?',nav_pricing:'Расценки',nav_contact:'Контакты',
+        back_btn:'← Назад',
+        reroll:'Показать других',title:'Учителя',pick:'Подбор учителей',
+        choose:'Выбрать',exp_label:'Опыт',exp_suffix:'лет',focus_label:'Фокус',format_label:'Формат',
+        hint_prefix:'Показано 5 случайных преподавателей под цель',
+        invalid_title:'Неверная ссылка',invalid_hint:'Вернитесь и выберите язык/цель заново.',
+        modal_title:'Связаться',modal_chosen:'Вы выбрали учителя',modal_question:'Как удобно связаться?',
+        modal_cancel:'Отмена',
+        modal_success_title:'Всё отлично!',modal_success_message:'Мы свяжемся с вами в течение дня.',
+        modal_success_channel:'Канал',modal_success_thanks:'Спасибо!',modal_open:'Открыть',modal_close:'Закрыть'
+      },
+      ua: {
+        nav_back:'Назад',nav_about:'Хто ми?',nav_pricing:'Ціни',nav_contact:'Контакти',
+        back_btn:'← Назад',
+        reroll:'Показати інших',title:'Вчителі',pick:'Підбір викладачів',
+        choose:'Обрати',exp_label:'Досвід',exp_suffix:'років',focus_label:'Фокус',format_label:'Формат',
+        hint_prefix:'Показано 5 випадкових викладачів під ціль',
+        invalid_title:'Некоректне посилання',invalid_hint:'Поверніться та оберіть мову/ціль заново.',
+        modal_title:'Звʼязатися',modal_chosen:'Ви обрали викладача',modal_question:'Як зручно звʼязатися?',
+        modal_cancel:'Скасувати',
+        modal_success_title:'Усе чудово!',modal_success_message:'Ми звʼяжемося з вами протягом дня.',
+        modal_success_channel:'Канал',modal_success_thanks:'Дякуємо!',modal_open:'Відкрити',modal_close:'Закрити'
+      }
+    };
+
 
     function inferIconKey(link){
       const label = (link.label || '').toLowerCase();
@@ -235,12 +262,7 @@
       $('uiRu').setAttribute('aria-pressed', ui==='ru' ? 'true':'false');
       $('uiUa').setAttribute('aria-pressed', ui==='ua' ? 'true':'false');
       document.documentElement.lang = ui==='ua' ? 'uk' : 'ru';
-      const I={
-        ru:{nav_back:'Назад',nav_about:'Кто мы?',nav_pricing:'Расценки',nav_contact:'Контакты',
-            reroll:'Показать других',title:'Учителя',pick:'Подбор учителей'},
-        ua:{nav_back:'Назад',nav_about:'Хто ми?',nav_pricing:'Ціни',nav_contact:'Контакти',
-            reroll:'Показати інших',title:'Вчителі',pick:'Підбір вчителів'}
-      };
+      const I = UI_COPY;
       document.querySelectorAll('[data-i18n]').forEach(n=>{
         const k=n.getAttribute('data-i18n');
         if(I[ui] && I[ui][k]) n.textContent=I[ui][k];
@@ -282,8 +304,10 @@
     }
 
     function modalChoose(){
-      $('modalTitle').textContent = getUI()==='ua' ? 'Звʼязатися' : 'Связаться';
-      $('modalText').textContent = `${getUI()==='ua' ? 'Ви обрали викладача' : 'Вы выбрали учителя'}: ${selectedTeacher}. ${getUI()==='ua' ? 'Як зручно звʼязатися?' : 'Как удобно связаться?'}`;
+      const ui = getUI();
+      const copy = UI_COPY[ui] || UI_COPY.ru;
+      $('modalTitle').textContent = copy.modal_title;
+      $('modalText').textContent = `${copy.modal_chosen}: ${selectedTeacher}. ${copy.modal_question}`;
 
       const actions = $('modalActions');
       actions.innerHTML = '';
@@ -306,7 +330,7 @@
         actions.appendChild(btn);
       });
 
-      const cancelBtn = el('button', { class: 'btn btn-ghost', type: 'button' }, [getUI()==='ua' ? 'Скасувати' : 'Отмена']);
+      const cancelBtn = el('button', { class: 'btn btn-ghost', type: 'button' }, [copy.modal_cancel]);
       cancelBtn.addEventListener('click', closeModal);
       actions.appendChild(cancelBtn);
 
@@ -314,7 +338,9 @@
     }
 
     function modalSuccess(method, url){
-      $('modalTitle').textContent = 'Всё отлично!';
+      const ui = getUI();
+      const copy = UI_COPY[ui] || UI_COPY.ru;
+      $('modalTitle').textContent = copy.modal_success_title;
       $('modalText').innerHTML = `
         <div class="success">
           <div class="success-badge" aria-hidden="true">
@@ -323,8 +349,8 @@
             </svg>
           </div>
           <div>
-            <div style="font-weight:900; margin-bottom:6px;">Мы свяжемся с вами в течение дня.</div>
-            <div class="muted">Канал: ${method}. Спасибо!</div>
+            <div style="font-weight:900; margin-bottom:6px;">${copy.modal_success_message}</div>
+            <div class="muted">${copy.modal_success_channel}: ${method}. ${copy.modal_success_thanks}</div>
           </div>
         </div>
       `;
@@ -333,10 +359,10 @@
       actions.innerHTML = '';
 
       if (url && url !== '#') {
-        actions.appendChild(el('a', { class: 'btn', href: url, target: '_blank', rel: 'noopener' }, ['Открыть ' + method]));
+        actions.appendChild(el('a', { class: 'btn', href: url, target: '_blank', rel: 'noopener' }, [`${copy.modal_open} ${method}`]));
       }
 
-      const okBtn = el('button', { class: 'btn btn-ghost', type: 'button' }, ['Закрыть']);
+      const okBtn = el('button', { class: 'btn btn-ghost', type: 'button' }, [copy.modal_close]);
       okBtn.addEventListener('click', closeModal);
       actions.appendChild(okBtn);
     }
@@ -345,19 +371,21 @@
       const goalObj = LANG.goals.find(g => g.id === GOAL);
       const pool = (LANG.teachers || []).filter(t => (t.goals || []).includes(GOAL));
       const five = shuffle(pool).slice(0, 5);
+      const ui = getUI();
+      const copy = UI_COPY[ui] || UI_COPY.ru;
 
       $('langFlag').textContent = LANG.flag;
-      $('pageTitle').textContent = `Учителя — ${LANG.name}`;
+      $('pageTitle').textContent = `${copy.title} — ${LANG.name}`;
       $('pageSubtitle').textContent = goalObj ? goalObj.title : '';
 
-      $('teachersTitle').textContent = `Учителя — ${LANG.name} • ${goalObj ? goalObj.title : ''}`;
-      $('hint').textContent = `Показано 5 случайных преподавателей под цель: ${goalObj ? goalObj.title : ''}.`;
+      $('teachersTitle').textContent = `${copy.title} — ${LANG.name} • ${goalObj ? goalObj.title : ''}`;
+      $('hint').textContent = `${copy.hint_prefix}: ${goalObj ? goalObj.title : ''}.`;
 
       const grid = $('teacherGrid');
       grid.innerHTML = '';
 
       five.forEach(t => {
-        const chooseBtn = el('button', { class: 'btn', type: 'button' }, ['Выбрать']);
+        const chooseBtn = el('button', { class: 'btn', type: 'button' }, [copy.choose]);
         chooseBtn.addEventListener('click', () => {
           selectedTeacher = t.name;
           modalChoose();   // ✅ модалка только после клика
@@ -374,9 +402,9 @@
             ]),
             el('p', { class: 'text' }, [t.bio]),
             el('ul', { class: 'meta' }, [
-              el('li', {}, [`Опыт: ${t.experienceYears} лет`]),
-              el('li', {}, [`Фокус: ${t.focus.join(', ')}`]),
-              el('li', {}, [`Формат: ${t.format}`])
+              el('li', {}, [`${copy.exp_label}: ${t.experienceYears} ${copy.exp_suffix}`]),
+              el('li', {}, [`${copy.focus_label}: ${t.focus.join(', ')}`]),
+              el('li', {}, [`${copy.format_label}: ${t.format}`])
             ]),
             el('div', { style: 'margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;' }, [chooseBtn])
           ])
@@ -385,7 +413,10 @@
     }
 
     (async function init(){
-      const res = await fetch('./data.json', { cache: 'no-store' });
+      const ui = getUI();
+      setUI(ui);
+      const dataFile = ui === 'ua' ? './data-ua.json' : './data.json';
+      const res = await fetch(dataFile, { cache: 'no-store' });
       DATA = await res.json();
 
       $('siteName').textContent = DATA.site.name;
@@ -397,8 +428,9 @@
 
       if (!LANG || !GOAL) {
         applyTheme(DATA.site.defaultTheme);
-        $('teachersTitle').textContent = 'Неверная ссылка';
-        $('hint').textContent = 'Вернитесь и выберите язык/цель заново.';
+        const copy = UI_COPY[ui] || UI_COPY.ru;
+        $('teachersTitle').textContent = copy.invalid_title;
+        $('hint').textContent = copy.invalid_hint;
         return;
       }
 

@@ -56,8 +56,8 @@
     <section class="section" id="languages">
       <div class="container">
         <div class="section-head">
-          <h2>Выберите язык</h2>
-          <p class="muted">Наведите — увидите цвет страны. Нажмите — откроется отдельная страница.</p>
+          <h2 data-i18n="languages_title">Выберите язык</h2>
+          <p class="muted" data-i18n="languages_subtitle">Наведите — увидите цвет страны. Нажмите — откроется отдельная страница.</p>
         </div>
         <div class="lang-grid" id="langGrid"></div>
       </div>
@@ -75,8 +75,8 @@
     <section class="section" id="why">
       <div class="container">
         <div class="section-head">
-          <h2>Почему выбирают нас?</h2>
-          <p class="muted">Понятно. Системно. С результатом.</p>
+          <h2 data-i18n="why_title">Почему выбирают нас?</h2>
+          <p class="muted" data-i18n="why_subtitle">Понятно. Системно. С результатом.</p>
         </div>
         <div class="cards" id="whyCards"></div>
       </div>
@@ -116,29 +116,29 @@
     <section class="section" id="contact">
       <div class="container contact-grid">
         <div class="panel">
-          <h2>Контакты</h2>
+          <h2 data-i18n="contact_title">Контакты</h2>
           <p class="text muted" id="contactText"></p>
 
           <div class="contact-list" id="contactList"></div>
           <div class="socials" id="socials"></div>
         </div>
 
-        <form class="panel form" onsubmit="event.preventDefault(); alert('Заявка отправлена! (демо)');">
-          <h2 style="margin-top:0;">Связаться с нами</h2>
+        <form class="panel form" onsubmit="event.preventDefault(); handleFormSubmit();">
+          <h2 style="margin-top:0;" data-i18n="form_title">Связаться с нами</h2>
           <label>
-            Имя
-            <input required type="text" placeholder="Например: Алина" />
+            <span data-i18n="form_name">Имя</span>
+            <input required type="text" placeholder="Например: Алина" data-i18n-placeholder="form_name_placeholder" />
           </label>
           <label>
-            Телефон / Telegram
-            <input required type="text" placeholder="@username или +380..." />
+            <span data-i18n="form_phone">Телефон / Telegram</span>
+            <input required type="text" placeholder="@username или +380..." data-i18n-placeholder="form_phone_placeholder" />
           </label>
           <label>
-            Что вам нужно?
-            <textarea rows="4" placeholder="язык, цель, уровень, сколько раз в неделю"></textarea>
+            <span data-i18n="form_need">Что вам нужно?</span>
+            <textarea rows="4" placeholder="язык, цель, уровень, сколько раз в неделю" data-i18n-placeholder="form_need_placeholder"></textarea>
           </label>
-          <button class="btn" type="submit">Отправить</button>
-          <p class="muted tiny">Подключите отправку через сервер/CRM, когда будете готовы.</p>
+          <button class="btn" type="submit" data-i18n="form_submit">Отправить</button>
+          <p class="muted tiny" data-i18n="form_note">Подключите отправку через сервер/CRM, когда будете готовы.</p>
         </form>
       </div>
     </section>
@@ -201,17 +201,46 @@
       document.documentElement.lang = ui==='ua' ? 'uk' : 'ru';
       // tiny i18n for nav and pricing
       const I = {
-        ru: {nav_languages:'Языки',nav_about:'Кто мы?',nav_why:'Почему мы?',nav_pricing:'Расценки',nav_contact:'Контакты',
-             btn_choose_language:'Выбрать язык',btn_contact:'Связаться',
-             pricing_title:'Расценки и планы',pricing_subtitle:'Выберите формат и длительность — и сравните обычный и премиум.'},
-        ua: {nav_languages:'Мови',nav_about:'Хто ми?',nav_why:'Чому ми?',nav_pricing:'Ціни',nav_contact:'Контакти',
-             btn_choose_language:'Обрати мову',btn_contact:'Звʼязатися',
-             pricing_title:'Ціни та плани',pricing_subtitle:'Оберіть формат і тривалість — та порівняйте звичайний і преміум.'}
+        ru: {
+          nav_languages:'Языки',nav_about:'Кто мы?',nav_why:'Почему мы?',nav_pricing:'Расценки',nav_contact:'Контакты',
+          btn_choose_language:'Выбрать язык',btn_contact:'Связаться',
+          languages_title:'Выберите язык',languages_subtitle:'Наведите — увидите цвет страны. Нажмите — откроется отдельная страница.',
+          why_title:'Почему выбирают нас?',why_subtitle:'Понятно. Системно. С результатом.',
+          pricing_title:'Расценки и планы',pricing_subtitle:'Выберите формат и длительность — и сравните обычный и премиум.',
+          contact_title:'Контакты',
+          form_title:'Связаться с нами',form_name:'Имя',form_phone:'Телефон / Telegram',form_need:'Что вам нужно?',
+          form_submit:'Отправить',form_note:'Подключите отправку через сервер/CRM, когда будете готовы.',
+          form_name_placeholder:'Например: Алина',form_phone_placeholder:'@username или +380...',form_need_placeholder:'язык, цель, уровень, сколько раз в неделю'
+        },
+        ua: {
+          nav_languages:'Мови',nav_about:'Хто ми?',nav_why:'Чому ми?',nav_pricing:'Ціни',nav_contact:'Контакти',
+          btn_choose_language:'Обрати мову',btn_contact:'Звʼязатися',
+          languages_title:'Оберіть мову',languages_subtitle:'Наведіть — побачите колір країни. Натисніть — відкриється окрема сторінка.',
+          why_title:'Чому обирають нас?',why_subtitle:'Зрозуміло. Системно. З результатом.',
+          pricing_title:'Ціни та плани',pricing_subtitle:'Оберіть формат і тривалість — та порівняйте звичайний і преміум.',
+          contact_title:'Контакти',
+          form_title:'Звʼязатися з нами',form_name:'Імʼя',form_phone:'Телефон / Telegram',form_need:'Що вам потрібно?',
+          form_submit:'Надіслати',form_note:'Підключіть відправку через сервер/CRM, коли будете готові.',
+          form_name_placeholder:'Наприклад: Аліна',form_phone_placeholder:'@username або +380...',form_need_placeholder:'мова, ціль, рівень, скільки разів на тиждень'
+        }
       };
       document.querySelectorAll('[data-i18n]').forEach(n=>{
         const k=n.getAttribute('data-i18n');
         if(I[ui] && I[ui][k]) n.textContent = I[ui][k];
       });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(n=>{
+        const k=n.getAttribute('data-i18n-placeholder');
+        if(I[ui] && I[ui][k]) n.setAttribute('placeholder', I[ui][k]);
+      });
+    }
+
+    function handleFormSubmit(){
+      const ui = getUI();
+      const messages = {
+        ru: 'Заявка отправлена! (демо)',
+        ua: 'Заявку надіслано! (демо)'
+      };
+      alert(messages[ui] || messages.ru);
     }
 function el(tag, attrs = {}, children = []) {
       const n = document.createElement(tag);
@@ -433,9 +462,11 @@ function el(tag, attrs = {}, children = []) {
     }
 
     (async function init() {
-      const res = await fetch('./data.json', { cache: 'no-store' });
+      const ui = getUI();
+      setUI(ui);
+      const dataFile = ui === 'ua' ? './data-ua.json' : './data.json';
+      const res = await fetch(dataFile, { cache: 'no-store' });
       const data = await res.json();
-      setUI(getUI());
       $('uiRu').addEventListener('click', ()=>{ location.search = '?ui=ru'; });
       $('uiUa').addEventListener('click', ()=>{ location.search = '?ui=ua'; });
       renderHome(data);

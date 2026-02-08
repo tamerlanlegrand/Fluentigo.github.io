@@ -1,0 +1,1061 @@
+{
+  "site": {
+    "name": "Fluentigo",
+    "footerText": "© Fluentigo. Усі права захищені.",
+    "defaultTheme": {
+      "pageBg": "#EAF6FF",
+      "text": "#0B1220",
+      "panelBg": "#FFFFFF",
+      "topbarBg": "#2D7CC4",
+      "topbarText": "#FFFFFF"
+    }
+  },
+  "hero": {
+    "kicker": "Fluentigo • мови легко та впевнено",
+    "title": "Почни говорити вільно",
+    "backgroundImage": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80",
+    "quotes": [
+      "Сьогодні — 10 хвилин. За місяць — впевнена мова.",
+      "Помилки — це кроки. Ми перетворюємо їх на прогрес.",
+      "Мова — це не правила. Це звичка говорити."
+    ],
+    "badges": [
+      "Зрозуміла система",
+      "Багато практики мовлення",
+      "Підбір викладача під ціль",
+      "Комфортний темп"
+    ]
+  },
+  "about": {
+    "title": "Хто ми?",
+    "text": "Fluentigo — мовна школа, де головне — щоб ви заговорили. Ми пояснюємо просто, даємо структуру й багато практики. Підбираємо програму під ціль: робота, навчання, іспити. Ви навчаєтесь без стресу й бачите прогрес уже в перші тижні."
+  },
+  "why": {
+    "cards": [
+      {
+        "title": "Зрозуміло й по суті",
+        "text": "Мінімум води — максимум практики та прикладів."
+      },
+      {
+        "title": "Говоріння з першого уроку",
+        "text": "М’яко виводимо в мовлення й знімаємо страх помилок."
+      },
+      {
+        "title": "Індивідуальний план",
+        "text": "Під ціль, рівень і ваш графік."
+      },
+      {
+        "title": "Системна граматика",
+        "text": "Схема + застосування в мовленні, без перевантаження."
+      },
+      {
+        "title": "Контроль прогресу",
+        "text": "Міні-перевірки та коригування курсу."
+      },
+      {
+        "title": "Зручні формати",
+        "text": "Індивідуально або в групі — як вам комфортно."
+      }
+    ]
+  },
+  "contact": {
+    "text": "Напишіть нам — ми порадимо найкращий формат і почнемо з безкоштовного міні-тесту рівня.",
+    "items": [
+      {
+        "label": "Телефон",
+        "value": "+380 XX XXX XX XX"
+      },
+      {
+        "label": "Email",
+        "value": "hello@fluentigo.com"
+      }
+    ],
+    "links": [
+      {
+        "label": "WhatsApp",
+        "url": "https://wa.me/380XXXXXXXXX"
+      },
+      {
+        "label": "Telegram",
+        "url": "https://t.me/fluentigo_school"
+      },
+      {
+        "label": "Instagram",
+        "url": "https://instagram.com/"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://facebook.com/"
+      },
+      {
+        "label": "Email",
+        "url": "mailto:hello@fluentigo.com"
+      }
+    ]
+  },
+  "languages": [
+    {
+      "id": "de",
+      "name": "Німецька",
+      "flag": "./assets/flags/de.svg",
+      "short": "Робота • навчання • іспити",
+      "hoverColor": "#F3D2A6",
+      "subtitle": "Оберіть ціль — і отримаєте 5 випадкових викладачів",
+      "theme": {
+        "pageBg": "#F2D7B8",
+        "text": "#1A120B",
+        "panelBg": "#FFFFFF",
+        "topbarBg": "#B96A2C",
+        "topbarText": "#FFFFFF"
+      },
+      "goals": [
+        {
+          "id": "work",
+          "title": "Для роботи",
+          "subtitle": "Співбесіди, листи, робоче мовлення"
+        },
+        {
+          "id": "study",
+          "title": "Для навчання",
+          "subtitle": "Школа/університет, академічна мова"
+        },
+        {
+          "id": "exam",
+          "title": "Для іспиту",
+          "subtitle": "Goethe/ÖSD/TestDaF"
+        }
+      ],
+      "teachers": [
+        {
+          "name": "Анна Мюллер",
+          "initials": "АМ",
+          "role": "Німецька • Business (A2–C1)",
+          "bio": "Співбесіди без паніки: сильні відповіді й ділові формулювання.",
+          "experienceYears": 7,
+          "focus": [
+            "Interview",
+            "Business",
+            "Emails"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "work"
+          ]
+        },
+        {
+          "name": "Денис Краус",
+          "initials": "ДК",
+          "role": "Німецька • Робота/переїзд (A2–B2)",
+          "bio": "Робочий словник і діалоги до автоматизму.",
+          "experienceYears": 6,
+          "focus": [
+            "Work vocab",
+            "Speaking",
+            "CV"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "work"
+          ]
+        },
+        {
+          "name": "Єва Шмідт",
+          "initials": "ЄШ",
+          "role": "Німецька • Ділове мовлення (B1–C1)",
+          "bio": "Листи, зустрічі, дзвінки — говоримо чітко й упевнено.",
+          "experienceYears": 9,
+          "focus": [
+            "Meetings",
+            "Presentations",
+            "Emails"
+          ],
+          "format": "індивідуально/група",
+          "goals": [
+            "work"
+          ]
+        },
+        {
+          "name": "Ірина Гофман",
+          "initials": "ІГ",
+          "role": "Німецька • Навчання (A1–B2)",
+          "bio": "Навчальні теми + реальне мовлення: зрозуміла система й практика.",
+          "experienceYears": 8,
+          "focus": [
+            "Study",
+            "Vocabulary",
+            "Speaking"
+          ],
+          "format": "група/індив.",
+          "goals": [
+            "study"
+          ]
+        },
+        {
+          "name": "Тімур Беккер",
+          "initials": "ТБ",
+          "role": "Німецька • Для навчання (A1–B2)",
+          "bio": "Завдання, говоріння, впевненість щотижня.",
+          "experienceYears": 5,
+          "focus": [
+            "Study",
+            "Grammar",
+            "Speaking"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "study"
+          ]
+        },
+        {
+          "name": "Надія Фішер",
+          "initials": "НФ",
+          "role": "Німецька • Академічна (B1–C1)",
+          "bio": "Пишемо й говоримо структурно: аргументи, зв’язки, логіка.",
+          "experienceYears": 7,
+          "focus": [
+            "Writing",
+            "Structure",
+            "Argumentation"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "study",
+            "exam"
+          ]
+        },
+        {
+          "name": "Марко Штайн",
+          "initials": "МШ",
+          "role": "Німецька • Goethe/ÖSD (A2–C1)",
+          "bio": "Іспит крок за кроком: критерії, шаблони, стратегія, фідбек.",
+          "experienceYears": 10,
+          "focus": [
+            "Goethe",
+            "ÖSD",
+            "Writing"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "exam"
+          ]
+        },
+        {
+          "name": "Вікторія Нойман",
+          "initials": "ВН",
+          "role": "Німецька • Іспити (B1–C1)",
+          "bio": "Типові завдання, таймінг, зв’язки — без хаосу.",
+          "experienceYears": 7,
+          "focus": [
+            "Sprechen",
+            "Schreiben",
+            "Timing"
+          ],
+          "format": "індив./група",
+          "goals": [
+            "exam"
+          ]
+        },
+        {
+          "name": "Павло Шульц",
+          "initials": "ПШ",
+          "role": "Німецька • TestDaF (B2–C1)",
+          "bio": "Точність, аргументація, структура — до рівня іспиту.",
+          "experienceYears": 8,
+          "focus": [
+            "TestDaF",
+            "Argumentation",
+            "Structure"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "exam"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr",
+      "name": "Французька",
+      "flag": "./assets/flags/fr.svg",
+      "short": "Робота • навчання • іспити",
+      "hoverColor": "#DDEBFF",
+      "subtitle": "Оберіть ціль — і отримаєте 5 випадкових викладачів",
+      "theme": {
+        "pageBg": "#DDEBFF",
+        "text": "#0B1220",
+        "panelBg": "#FFFFFF",
+        "topbarBg": "#2D7CC4",
+        "topbarText": "#FFFFFF"
+      },
+      "goals": [
+        {
+          "id": "work",
+          "title": "Для роботи",
+          "subtitle": "ділова мова та листи"
+        },
+        {
+          "id": "study",
+          "title": "Для навчання",
+          "subtitle": "школа/університет"
+        },
+        {
+          "id": "exam",
+          "title": "Для іспиту",
+          "subtitle": "DELF/DALF"
+        }
+      ],
+      "teachers": [
+        {
+          "name": "Софі Ламбер",
+          "initials": "СЛ",
+          "role": "FR • Business (A2–C1)",
+          "bio": "Робоче мовлення, листи, зустрічі — впевнено й природно.",
+          "experienceYears": 7,
+          "focus": [
+            "Business",
+            "Emails",
+            "Meetings"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "work"
+          ]
+        },
+        {
+          "name": "Жульєн Моро",
+          "initials": "ЖМ",
+          "role": "FR • Кар’єра (B1–C1)",
+          "bio": "Співбесіди, презентації: структура + живі формулювання.",
+          "experienceYears": 8,
+          "focus": [
+            "Interview",
+            "Presentations",
+            "Fluency"
+          ],
+          "format": "індив./група",
+          "goals": [
+            "work"
+          ]
+        },
+        {
+          "name": "Лея Мартен",
+          "initials": "ЛМ",
+          "role": "FR • Навчання (A1–B2)",
+          "bio": "Наздоганяємо програму й тренуємо мовлення щотижня.",
+          "experienceYears": 6,
+          "focus": [
+            "School",
+            "Grammar",
+            "Speaking"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "study"
+          ]
+        },
+        {
+          "name": "Тома Бернар",
+          "initials": "ТБ",
+          "role": "FR • Навчання/іспит (B1–C1)",
+          "bio": "Есе, аргументація, зв’язки — сильна структура.",
+          "experienceYears": 7,
+          "focus": [
+            "Essay",
+            "Structure",
+            "Argumentation"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "study",
+            "exam"
+          ]
+        },
+        {
+          "name": "Луї Жирар",
+          "initials": "ЛЖ",
+          "role": "FR • DELF/DALF (A2–C1)",
+          "bio": "Критерії, стратегії, таймінг — тренуємо те, що дає бали.",
+          "experienceYears": 10,
+          "focus": [
+            "DELF",
+            "DALF",
+            "Writing"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "exam"
+          ]
+        },
+        {
+          "name": "Наталі Б.",
+          "initials": "НБ",
+          "role": "FR • Іспити (B1–C1)",
+          "bio": "Шаблони говоріння/письма + точна перевірка.",
+          "experienceYears": 7,
+          "focus": [
+            "Speaking",
+            "Writing",
+            "Feedback"
+          ],
+          "format": "індив./група",
+          "goals": [
+            "exam"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en",
+      "name": "Англійська",
+      "flag": "./assets/flags/gb.svg",
+      "short": "Робота • навчання • іспити",
+      "hoverColor": "#DDE6FF",
+      "subtitle": "Оберіть ціль — і отримаєте 5 випадкових викладачів",
+      "theme": {
+        "pageBg": "#0E2A5A",
+        "text": "#0B1220",
+        "panelBg": "#FFFFFF",
+        "topbarBg": "#081A3A",
+        "topbarText": "#FFFFFF"
+      },
+      "goals": [
+        {
+          "id": "work",
+          "title": "Для роботи",
+          "subtitle": "interviews, emails, meetings"
+        },
+        {
+          "id": "study",
+          "title": "Для навчання",
+          "subtitle": "school/university"
+        },
+        {
+          "id": "exam",
+          "title": "Для іспиту",
+          "subtitle": "IELTS/TOEFL"
+        }
+      ],
+      "teachers": [
+        {
+          "name": "Maria K.",
+          "initials": "MK",
+          "role": "EN • Business (A2–C1)",
+          "bio": "Meetings, interviews, emails — clear & natural speech.",
+          "experienceYears": 7,
+          "focus": [
+            "Business",
+            "Interview",
+            "Emails"
+          ],
+          "format": "1-to-1",
+          "goals": [
+            "work"
+          ]
+        },
+        {
+          "name": "James P.",
+          "initials": "JP",
+          "role": "EN • Career (B1–C1)",
+          "bio": "Structure + fluency: explain your ideas confidently.",
+          "experienceYears": 8,
+          "focus": [
+            "Fluency",
+            "Presentations",
+            "Meetings"
+          ],
+          "format": "1-to-1",
+          "goals": [
+            "work"
+          ]
+        },
+        {
+          "name": "Olga S.",
+          "initials": "OS",
+          "role": "EN • Study (A2–B2)",
+          "bio": "School tasks become easy: grammar, writing, speaking weekly.",
+          "experienceYears": 6,
+          "focus": [
+            "School",
+            "Grammar",
+            "Vocabulary"
+          ],
+          "format": "1-to-1",
+          "goals": [
+            "study"
+          ]
+        },
+        {
+          "name": "Daniel R.",
+          "initials": "DR",
+          "role": "EN • Study/Exam (B1–C1)",
+          "bio": "Essay structure + feedback — measurable progress.",
+          "experienceYears": 5,
+          "focus": [
+            "Writing",
+            "Structure",
+            "Feedback"
+          ],
+          "format": "1-to-1",
+          "goals": [
+            "study",
+            "exam"
+          ]
+        },
+        {
+          "name": "Robert G.",
+          "initials": "RG",
+          "role": "EN • IELTS/TOEFL (B1–C1)",
+          "bio": "Strategy + timing: train what gives you points.",
+          "experienceYears": 10,
+          "focus": [
+            "IELTS",
+            "TOEFL",
+            "Writing"
+          ],
+          "format": "1-to-1",
+          "goals": [
+            "exam"
+          ]
+        },
+        {
+          "name": "Nina K.",
+          "initials": "NK",
+          "role": "EN • Exams (B1–C1)",
+          "bio": "Speaking & writing step-by-step with templates.",
+          "experienceYears": 7,
+          "focus": [
+            "Speaking",
+            "Writing",
+            "Timing"
+          ],
+          "format": "1-to-1/group",
+          "goals": [
+            "exam"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "es",
+      "name": "Іспанська",
+      "flag": "./assets/flags/es.svg",
+      "short": "Робота • навчання • іспити",
+      "hoverColor": "#FFF0A8",
+      "subtitle": "Оберіть ціль — і отримаєте 5 випадкових викладачів",
+      "theme": {
+        "pageBg": "#FFF1A8",
+        "text": "#1A120B",
+        "panelBg": "#FFFFFF",
+        "topbarBg": "#D8A100",
+        "topbarText": "#1A120B"
+      },
+      "goals": [
+        {
+          "id": "work",
+          "title": "Для роботи",
+          "subtitle": "комунікація та листи"
+        },
+        {
+          "id": "study",
+          "title": "Для навчання",
+          "subtitle": "школа/університет"
+        },
+        {
+          "id": "exam",
+          "title": "Для іспиту",
+          "subtitle": "DELE"
+        }
+      ],
+      "teachers": [
+        {
+          "name": "Lucía R.",
+          "initials": "LR",
+          "role": "ES • Trabajo (A2–C1)",
+          "bio": "Зустрічі та листи: упевнено й зрозуміло.",
+          "experienceYears": 7,
+          "focus": [
+            "Trabajo",
+            "Speaking",
+            "Emails"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "work"
+          ]
+        },
+        {
+          "name": "Carlos M.",
+          "initials": "CM",
+          "role": "ES • Trabajo (B1–C1)",
+          "bio": "Природне мовлення та швидкість — без паніки.",
+          "experienceYears": 8,
+          "focus": [
+            "Fluidez",
+            "Presentations",
+            "Vocabulario"
+          ],
+          "format": "індив./група",
+          "goals": [
+            "work"
+          ]
+        },
+        {
+          "name": "Ana L.",
+          "initials": "AL",
+          "role": "ES • Навчання (A1–B2)",
+          "bio": "Наздоганяємо програму й тренуємо говоріння.",
+          "experienceYears": 6,
+          "focus": [
+            "School",
+            "Grammar",
+            "Speaking"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "study"
+          ]
+        },
+        {
+          "name": "Sofía M.",
+          "initials": "SM",
+          "role": "ES • Навчання/іспит (B1–C1)",
+          "bio": "Есе й аргументація — сильна структура.",
+          "experienceYears": 7,
+          "focus": [
+            "Essay",
+            "Structure",
+            "Accuracy"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "study",
+            "exam"
+          ]
+        },
+        {
+          "name": "Pablo N.",
+          "initials": "PN",
+          "role": "ES • DELE (A2–C1)",
+          "bio": "Тренуємо те, що справді приносить бали.",
+          "experienceYears": 10,
+          "focus": [
+            "DELE",
+            "Writing",
+            "Timing"
+          ],
+          "format": "індивідуально",
+          "goals": [
+            "exam"
+          ]
+        },
+        {
+          "name": "Nina S.",
+          "initials": "NS",
+          "role": "ES • Exámenes (B1–C1)",
+          "bio": "Шаблони + точна перевірка письма й говоріння.",
+          "experienceYears": 7,
+          "focus": [
+            "Speaking",
+            "Writing",
+            "Feedback"
+          ],
+          "format": "індив./група",
+          "goals": [
+            "exam"
+          ]
+        }
+      ]
+    }
+  ],
+  "pricingInteractive": {
+    "currency": "грн",
+    "discountNote": {
+      "ru": "12 занятий — без скидки (стандарт). 20 занятий — небольшая скидка. 50 занятий — ощутимая скидка.",
+      "ua": "12 занять — без знижки (стандарт). 20 занять — невелика знижка. 50 занять — відчутна знижка."
+    },
+    "noteB2C1": {
+      "ru": "Уроки уровня B2–C1 дороже на 100 грн, чем другие уровни.",
+      "ua": "Уроки рівня B2–C1 дорожчі на 100 грн, ніж інші рівні."
+    },
+    "types": {
+      "individual": {
+        "label": {
+          "ru": "Индивидуальные",
+          "ua": "Індивідуальні"
+        },
+        "durations": [
+          60,
+          45
+        ],
+        "plans": {
+          "60": {
+            "regular": {
+              "single": 600,
+              "packs": [
+                {
+                  "count": 12,
+                  "per": 600,
+                  "total": 7200
+                },
+                {
+                  "count": 20,
+                  "per": 560,
+                  "total": 11200
+                },
+                {
+                  "count": 50,
+                  "per": 510,
+                  "total": 25500
+                }
+              ]
+            },
+            "premium": {
+              "single": 750,
+              "packs": [
+                {
+                  "count": 12,
+                  "per": 750,
+                  "total": 9000
+                },
+                {
+                  "count": 20,
+                  "per": 700,
+                  "total": 14000
+                },
+                {
+                  "count": 50,
+                  "per": 640,
+                  "total": 32000
+                }
+              ]
+            }
+          },
+          "45": {
+            "regular": {
+              "single": 450,
+              "packs": [
+                {
+                  "count": 12,
+                  "per": 450,
+                  "total": 5400
+                },
+                {
+                  "count": 20,
+                  "per": 420,
+                  "total": 8400
+                },
+                {
+                  "count": 50,
+                  "per": 380,
+                  "total": 19000
+                }
+              ]
+            },
+            "premium": {
+              "single": 600,
+              "packs": [
+                {
+                  "count": 12,
+                  "per": 600,
+                  "total": 7200
+                },
+                {
+                  "count": 20,
+                  "per": 560,
+                  "total": 11200
+                },
+                {
+                  "count": 50,
+                  "per": 510,
+                  "total": 25500
+                }
+              ]
+            }
+          }
+        },
+        "benefits": {
+          "regular": {
+            "title": {
+              "ru": "Обычный абонемент",
+              "ua": "Звичайний абонемент"
+            },
+            "sections": [
+              {
+                "title": {
+                  "ru": "Формат обучения",
+                  "ua": "Формат навчання"
+                },
+                "items": {
+                  "ru": [
+                    "Индивидуальные уроки с преподавателем",
+                    "Стандартная программа по уровню",
+                    "Домашние задания и работа на уроке",
+                    "Без дополнительного сопровождения вне занятий"
+                  ],
+                  "ua": [
+                    "Індивідуальні уроки з викладачем",
+                    "Стандартна програма за рівнем",
+                    "Домашні завдання та робота на уроці",
+                    "Без додаткового супроводу поза заняттями"
+                  ]
+                }
+              },
+              {
+                "title": {
+                  "ru": "Переносы и отмены",
+                  "ua": "Перенесення та скасування"
+                },
+                "items": {
+                  "ru": [
+                    "Перенос/отмена — не позднее чем за 8 часов до начала",
+                    "2 экстренных переноса в месяц без объяснения причины",
+                    "Абонемент действует в рамках текущего месяца",
+                    "Неиспользованные уроки не переносятся на следующий месяц"
+                  ],
+                  "ua": [
+                    "Перенесення/скасування — не пізніше ніж за 8 годин до початку",
+                    "2 термінові перенесення на місяць без пояснення причини",
+                    "Абонемент діє в межах поточного місяця",
+                    "Невикористані уроки не переносяться на наступний місяць"
+                  ]
+                }
+              }
+            ]
+          },
+          "premium": {
+            "title": {
+              "ru": "Премиум абонемент",
+              "ua": "Преміум абонемент"
+            },
+            "sections": [
+              {
+                "title": {
+                  "ru": "Формат обучения",
+                  "ua": "Формат навчання"
+                },
+                "items": {
+                  "ru": [
+                    "Индивидуальные уроки с преподавателем",
+                    "Персонализированная программа под цели ученика",
+                    "Доп. материалы и фокус на слабые места",
+                    "Постоянная связь с преподавателем 24/7 (чат)"
+                  ],
+                  "ua": [
+                    "Індивідуальні уроки з викладачем",
+                    "Персоналізована програма під цілі учня",
+                    "Додаткові матеріали та фокус на слабкі місця",
+                    "Постійний зв’язок з викладачем 24/7 (чат)"
+                  ]
+                }
+              },
+              {
+                "title": {
+                  "ru": "Переносы и отмены",
+                  "ua": "Перенесення та скасування"
+                },
+                "items": {
+                  "ru": [
+                    "Перенос/отмена — не позднее чем за 2 часа до начала",
+                    "Безлимитное количество переносов",
+                    "Урок считается использованным только при неявке без предупреждения",
+                    "Неиспользованные уроки можно переносить на следующий месяц"
+                  ],
+                  "ua": [
+                    "Перенесення/скасування — не пізніше ніж за 2 години до початку",
+                    "Необмежена кількість перенесень",
+                    "Урок вважається використаним лише при неявці без попередження",
+                    "Невикористані уроки можна переносити на наступний місяць"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      },
+      "group": {
+        "label": {
+          "ru": "Групповые",
+          "ua": "Групові"
+        },
+        "durations": [
+          60,
+          90
+        ],
+        "plans": {
+          "60": {
+            "regular": {
+              "single": 300,
+              "packs": [
+                {
+                  "count": 12,
+                  "per": 300,
+                  "total": 3600
+                },
+                {
+                  "count": 20,
+                  "per": 280,
+                  "total": 5600
+                },
+                {
+                  "count": 50,
+                  "per": 250,
+                  "total": 12500
+                }
+              ]
+            },
+            "premium": {
+              "single": 400,
+              "packs": [
+                {
+                  "count": 12,
+                  "per": 400,
+                  "total": 4800
+                },
+                {
+                  "count": 20,
+                  "per": 370,
+                  "total": 7400
+                },
+                {
+                  "count": 50,
+                  "per": 330,
+                  "total": 16500
+                }
+              ]
+            }
+          },
+          "90": {
+            "regular": {
+              "single": 450,
+              "packs": [
+                {
+                  "count": 12,
+                  "per": 450,
+                  "total": 5400
+                },
+                {
+                  "count": 20,
+                  "per": 420,
+                  "total": 8400
+                },
+                {
+                  "count": 50,
+                  "per": 380,
+                  "total": 19000
+                }
+              ]
+            },
+            "premium": {
+              "single": 600,
+              "packs": [
+                {
+                  "count": 12,
+                  "per": 600,
+                  "total": 7200
+                },
+                {
+                  "count": 20,
+                  "per": 560,
+                  "total": 11200
+                },
+                {
+                  "count": 50,
+                  "per": 510,
+                  "total": 25500
+                }
+              ]
+            }
+          }
+        },
+        "benefits": {
+          "regular": {
+            "title": {
+              "ru": "Обычный абонемент",
+              "ua": "Звичайний абонемент"
+            },
+            "sections": [
+              {
+                "title": {
+                  "ru": "Формат обучения",
+                  "ua": "Формат навчання"
+                },
+                "items": {
+                  "ru": [
+                    "Занятия в мини-группе",
+                    "Программа по уровню",
+                    "Домашние задания и поддержка на уроке"
+                  ],
+                  "ua": [
+                    "Заняття в міні-групі",
+                    "Програма за рівнем",
+                    "Домашні завдання та підтримка на уроці"
+                  ]
+                }
+              },
+              {
+                "title": {
+                  "ru": "Посещения",
+                  "ua": "Відвідування"
+                },
+                "items": {
+                  "ru": [
+                    "Перенос по времени невозможен (урок проходит для всей группы)",
+                    "Пропущенные занятия не компенсируются",
+                    "Абонемент действует в рамках текущего месяца"
+                  ],
+                  "ua": [
+                    "Перенесення за часом неможливе (урок проходить для всієї групи)",
+                    "Пропущені заняття не компенсуються",
+                    "Абонемент діє в межах поточного місяця"
+                  ]
+                }
+              }
+            ]
+          },
+          "premium": {
+            "title": {
+              "ru": "Премиум абонемент",
+              "ua": "Преміум абонемент"
+            },
+            "sections": [
+              {
+                "title": {
+                  "ru": "Формат обучения",
+                  "ua": "Формат навчання"
+                },
+                "items": {
+                  "ru": [
+                    "Мини-группа + расширенные материалы",
+                    "Больше разговорной практики и обратной связи",
+                    "Поддержка в чате по организационным вопросам"
+                  ],
+                  "ua": [
+                    "Міні-група + розширені матеріали",
+                    "Більше розмовної практики та зворотного зв’язку",
+                    "Підтримка в чаті з організаційних питань"
+                  ]
+                }
+              },
+              {
+                "title": {
+                  "ru": "Посещения",
+                  "ua": "Відвідування"
+                },
+                "items": {
+                  "ru": [
+                    "Перенос по времени невозможен (группа)",
+                    "Неиспользованные занятия можно перенести на следующий месяц (чтобы не терять)"
+                  ],
+                  "ua": [
+                    "Перенесення за часом неможливе (група)",
+                    "Невикористані заняття можна перенести на наступний місяць (щоб не втрачати)"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
